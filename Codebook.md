@@ -1,4 +1,4 @@
-Course project Getting and Cleaning Data
+#Course project Getting and Cleaning Data
 
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
 One of the most exciting areas in all of data science right now is wearable computing.  Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
@@ -6,7 +6,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-Below is the readme file from the study’s dataset with changes appended for the course assignment.
+Below is the readme file from the studyâ€™s dataset with changes appended for the course assignment.
 
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
@@ -14,7 +14,7 @@ Version 1.0
 ==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Università degli Studi di Genova.
+DITEN - UniversitÃ  degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
@@ -83,12 +83,12 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 Additions for Course assignment:
 The following files were added:
 
-	-‘Codebook.txt’ – Original ‘Readme.txt’ with modifications, this document
-	-‘featureselection.txt’ – Original ‘features_info.txt’ with modifications
-	- ‘tidyfeatures.txt’ – List of features for tidy dataset, also has subject and activity.
-	-‘ run_analysis.R’ – R script to perform tasks et out by course assignment.
+	-â€˜Codebook.mdâ€™ â€“ Original â€˜Readme.txtâ€™ with modifications, this document
+	-â€˜featureselection.txtâ€™ â€“ Original â€˜features_info.txtâ€™ with modifications
+	-â€˜tidyfeatures.txtâ€™ â€“ List of features for tidy dataset, also has subject and activity.
+	-â€˜run_analysis.Râ€™ â€“ R script to perform tasks et out by course assignment.
 
-The following are the steps are in file ‘run_analysis.R’
+The following are the steps are in file â€˜run_analysis.Râ€™
 
 
 1. Merge the training and the test sets to create one data set.
@@ -97,21 +97,21 @@ The following are the steps are in file ‘run_analysis.R’
 	
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
        
-       This was done by searching (grep) the Master Dataset column Names and then getting a subset of the Master Dataset to make a tidy Dataset, (tidiness in progress). File ‘featureselection.txt’ have more information
+       This was done by searching (grep) the Master Dataset column Names and then getting a subset of the Master Dataset to make a tidy Dataset, (tidiness in progress). File â€˜featureselection.txtâ€™ have more information
        
        
 3. Uses descriptive activity names to name the activities in the data set
 
-       'train/y_train.txt' and 'test/y_test.txt' – Activity labels are row bound (rbind)
-	Merge the Activity Labels with the class name from ‘activity_labels.txt'. From this result creating a one column data frame for the Activity name that is combined on columns with the tidy Dataset (cbind)
+       'train/y_train.txt' and 'test/y_test.txt' â€“ Activity labels are row bound (rbind)
+	Merge the Activity Labels with the class name from â€˜activity_labels.txt'. From this result creating a one column data frame for the Activity name that is combined on columns with the tidy Dataset (cbind)
 	'train/subject_train.txt' and 'test/subject_test.txt' is row bound (rbind) and the added to the tidy Dataset
 
 
 4 Appropriately labels the data set with descriptive variable names.
 
-	This done by searching and substituting descriptive Name for existing (gsub). (Column names are saved off into a file ‘tidyfeatures.txt’)
+	This done by searching and substituting descriptive Name for existing (gsub). (Column names are saved off into a file â€˜tidyfeatures.txtâ€™)
 
 6. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 	
-	This done by using aggregate mean on the tidy dataset grouped by ‘subject’ and activity class name or column ‘activity’. The result is written to file tidysummerized.txt
+	This done by using aggregate mean on the tidy dataset grouped by â€˜subjectâ€™ and activity class name or column â€˜activityâ€™. The result is written to file tidysummerized.txt
 
