@@ -5,7 +5,7 @@ This repo contains the following files:
 
   **Codebook.md** - This explains the project, the data involved, and the methods used.
   
-  **featureselection.txt** - Referenced in the Codebook, this further expalins the features of the variables on the tidy dataset
+  **featureselection.txt** - Referenced in the Codebook, this further explains the features of the variables on the tidy dataset
   
   **Tidyfeatures.txt** - List of tidy features of the variable
   
