@@ -18,8 +18,8 @@ elseif
   unlink("data/*")
 }
 ## download File and Unzip in Dir data
-#download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","data/Dataset.zip",mode="wb")  
-#unzip("./data/Dataset.zip",overwrite = TRUE, exdir = "data")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","data/Dataset.zip",mode="wb")  
+unzip("./data/Dataset.zip",overwrite = TRUE, exdir = "data")
 
 ## Load up test and training data and set rows and col names
 ## load data
